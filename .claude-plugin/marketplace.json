@@ -2,17 +2,17 @@
   "name": "adweave-beta",
   "owner": {
     "name": "AdWeave AI",
-    "url": "https://adweave.ai"
+    "email": "support@adweave.ai"
+  },
+  "metadata": {
+    "description": "AdWeave plugin — beta channel (tracks main)",
+    "version": "1.0.0-dev"
   },
   "plugins": [
     {
       "name": "adweave",
-      "description": "AdWeave plugin — beta channel (tracks main)",
-      "source": {
-        "source": "github",
-        "repo": "adweave-ai/adweave-claude-plugin",
-        "ref": "main"
-      }
+      "source": "./",
+      "description": "Opinionated B2C SaaS / DTC marketing workflow for Meta Ads via the AdWeave MCP."
     }
   ]
 }
