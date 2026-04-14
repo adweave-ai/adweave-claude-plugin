@@ -1,0 +1,16 @@
+{
+  "name": "adweave-claude-plugin",
+  "version": "1.0.0-dev",
+  "description": "AdWeave Claude Code plugin — opinionated marketing workflow on top of the AdWeave MCP server",
+  "private": true,
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "npm run validate"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
