@@ -1,0 +1,37 @@
+{
+  "name": "adweave",
+  "version": "1.0.0-dev",
+  "description": "Opinionated B2C SaaS / DTC marketing workflow for Meta Ads via the AdWeave MCP. Ships the daily creative engine, metrics feedback loop, ad launch, creative production, and competitor research as a set of composable skills.",
+  "author": {
+    "name": "AdWeave AI",
+    "email": "support@adweave.ai",
+    "url": "https://adweave.ai"
+  },
+  "homepage": "https://adweave.ai",
+  "repository": "https://github.com/adweave-ai/adweave-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "meta-ads",
+    "facebook-ads",
+    "instagram-ads",
+    "marketing",
+    "advertising",
+    "ad-creative",
+    "mcp",
+    "adweave"
+  ],
+  "userConfig": {
+    "api_token": {
+      "description": "Optional AdWeave API token (aw_...). Skip if using OAuth (recommended).",
+      "sensitive": true
+    },
+    "default_brand_slug": {
+      "description": "If you manage one brand, put its slug here to skip the picker at setup.",
+      "sensitive": false
+    },
+    "workspace_path": {
+      "description": "Where daily batches, tracker, and foundation docs live. Defaults to current working directory.",
+      "sensitive": false
+    }
+  }
+}
