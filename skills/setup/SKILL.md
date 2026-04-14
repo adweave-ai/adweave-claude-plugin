@@ -1,6 +1,10 @@
 ---
 name: setup
-description: Use when the user runs `/adweave:setup`, says "set up adweave", "connect my brand", "re-setup", "switch brands", or when the AdWeave plugin needs first-run configuration (missing `${CLAUDE_PLUGIN_DATA}/config.json` or `setup_complete: false`). Handles OAuth / API-token auth, brand selection, workspace detection, and optional foundation scaffolding.
+description: >-
+  Use when the user runs /adweave:setup, says "set up adweave", "connect
+  my brand", "re-setup", "switch brands", or when the AdWeave plugin
+  needs first-run configuration. Handles OAuth or API-token auth, brand
+  selection, workspace detection, and optional foundation scaffolding.
 user-invocable: true
 disable-model-invocation: false
 allowed-tools:
