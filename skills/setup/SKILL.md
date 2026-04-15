@@ -12,6 +12,9 @@ allowed-tools:
   - mcp__adweave-meta-ads__tool_set_brand_context
   - mcp__adweave-meta-ads__tool_get_brand_profile
   - mcp__adweave-meta-ads__tool_get_adweave_methodology
+  - mcp__adweave-meta-ads__tool_get_avatars
+  - mcp__adweave-meta-ads__tool_get_offer_brief
+  - mcp__adweave-meta-ads__tool_get_beliefs
   - Read
   - Write
 ---
