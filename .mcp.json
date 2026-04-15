@@ -3,10 +3,7 @@
     "adweave-meta-ads": {
       "type": "http",
       "url": "https://c8af-98-41-135-40.ngrok-free.app/meta-ads-mcp",
-      "headers": {
-        "Authorization": "Bearer aw_05ebL_JnjP1i-Th__ssaV3n9XUGQsfqA25vRRSpzovk"
-      },
-      "note": "LOCAL DEV: hardcoded aw_ token scoped to the local Supabase DB only. Before v1.0.0: swap URL to https://mcp.adweave.ai/meta-ads-mcp and replace the hardcoded Authorization with \"Bearer ${user_config.api_token}\". The userConfig.api_token field is already declared in plugin.json."
+      "note": "DEV endpoint via ngrok — swap to https://mcp.adweave.ai/meta-ads-mcp before v1.0.0 tag. Cowork / Claude Desktop handles auth natively via MCP OAuth."
     }
   }
 }
