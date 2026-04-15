@@ -2,8 +2,8 @@
   "mcpServers": {
     "adweave-meta-ads": {
       "type": "http",
-      "url": "https://c8af-98-41-135-40.ngrok-free.app/meta-ads-mcp",
-      "note": "DEV endpoint via ngrok — swap to https://mcp.adweave.ai/meta-ads-mcp before v1.0.0 tag. Cowork / Claude Desktop handles auth natively via MCP OAuth."
+      "url": "https://brandons-macbook-air-2.tail2cb6de.ts.net/meta-ads-mcp",
+      "note": "DEV endpoint via Tailscale Funnel (permanent for this machine). Swap to https://mcp.adweave.ai/meta-ads-mcp before v1.0.0 tag. Cowork / Claude Desktop handles auth natively via MCP OAuth."
     }
   }
 }
