@@ -3,7 +3,10 @@
     "adweave-meta-ads": {
       "type": "http",
       "url": "https://c8af-98-41-135-40.ngrok-free.app/meta-ads-mcp",
-      "note": "DEV endpoint via ngrok — swap to https://mcp.adweave.ai/meta-ads-mcp before v1.0.0 tag. On first connection the client will be prompted to authorize via OAuth. Alternatively, set the api_token userConfig value to a token from adweave.ai/api-tokens."
+      "headers": {
+        "Authorization": "Bearer ${user_config.api_token}"
+      },
+      "note": "DEV endpoint via ngrok — swap to https://mcp.adweave.ai/meta-ads-mcp before v1.0.0 tag. Set the api_token userConfig value to an aw_... token from adweave.ai/api-tokens (or use OAuth once server-driven auth is wired)."
     }
   }
 }
