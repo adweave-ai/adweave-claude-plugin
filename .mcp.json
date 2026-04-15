@@ -2,7 +2,7 @@
   "mcpServers": {
     "adweave-meta-ads": {
       "type": "http",
-      "url": "https://brandons-macbook-air-2.tail2cb6de.ts.net/meta-ads-mcp",
+      "url": "https://adweave-mcp-dev.tail2cb6de.ts.net/meta-ads-mcp",
       "note": "DEV endpoint via Tailscale Funnel (permanent for this machine). Swap to https://mcp.adweave.ai/meta-ads-mcp before v1.0.0 tag. Cowork / Claude Desktop handles auth natively via MCP OAuth."
     }
   }
