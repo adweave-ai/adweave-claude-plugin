@@ -29,8 +29,8 @@ If using an `aw_` token instead of OAuth, export it via the `api_token` userConf
 - [ ] `set_brand_context` succeeds; active brand confirmed in chat
 - [ ] `get_brand_profile` returns a profile with `ad_account_ids`, `page_id`, `ig_user_id`, `pixel_id`, `landing_url`
 - [ ] Foundation scaffold offered; accepting copies all 5 template files from MCP into `./foundation/`
-- [ ] `${CLAUDE_PLUGIN_DATA}/config.json` written with `setup_complete: true`
-- [ ] Restart Claude Code → SessionStart hook prints *"AdWeave active. Brand: <slug>."*
+- [ ] `mcp_brand_sessions` row persists the active brand for this user (verify: `select * from mcp_brand_sessions where user_id=...`)
+- [ ] Restart Claude Code → SessionStart hook prints the generic "AdWeave plugin loaded" banner; brand context is re-resolved at first skill invocation via `get_current_brand_context`
 
 ### Methodology loading
 - [ ] A skill's first call is `get_adweave_methodology(...)` with the expected bundle — observe tool-call log

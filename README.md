@@ -52,7 +52,7 @@ Once done, you're ready for `/adweave:daily-batch`.
 | Avatars, beliefs, offer brief | Local `./foundation/` markdown |
 | Daily batches, tracker | Local `./daily-batches/`, `./testing/` |
 | Creative assets | User's Supabase (URL-based handoff to Meta) |
-| Active brand pointer | `${CLAUDE_PLUGIN_DATA}/config.json` |
+| Active brand pointer | AdWeave DB (`mcp_brand_sessions`, keyed on user_id, set via `set_brand_context`) |
 
 The plugin itself is a thin orchestration layer — skills load AdWeave's opinionated methodology on demand from the MCP (via the `get_adweave_methodology` tool). This keeps the plugin distributable under MIT while the methodology stays in AdWeave's service.
 

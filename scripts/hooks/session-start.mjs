@@ -2,36 +2,16 @@
 /**
  * SessionStart hook for the adweave plugin.
  *
- * Reads ${CLAUDE_PLUGIN_DATA}/config.json. If missing or setup_complete=false,
- * prints a one-line hint pointing the user at /adweave:setup. If setup is
- * complete, prints a one-line banner with the active brand slug.
+ * Prints a one-line banner pointing the user at /adweave:setup.
+ * The active brand is persisted server-side (mcp_brand_sessions) and
+ * resolved at skill-invocation time via `get_current_brand_context`, so
+ * this hook does NOT attempt to display it — hooks run without MCP auth
+ * and can't query the server. A local cache was tried historically but
+ * failed in sandboxed environments (e.g., Cowork), so it's gone.
  *
  * Output goes to stdout; Claude Code injects it as a SystemMessage.
  */
-import { readFileSync, existsSync } from 'node:fs';
-import { join } from 'node:path';
 
-const dataDir = process.env.CLAUDE_PLUGIN_DATA;
-if (!dataDir) {
-  console.log('AdWeave plugin detected (CLAUDE_PLUGIN_DATA unset).');
-  process.exit(0);
-}
-
-const configPath = join(dataDir, 'config.json');
-
-if (!existsSync(configPath)) {
-  console.log('AdWeave plugin detected but setup incomplete. Run `/adweave:setup` to connect.');
-  process.exit(0);
-}
-
-try {
-  const config = JSON.parse(readFileSync(configPath, 'utf-8'));
-  if (!config.setup_complete) {
-    console.log('AdWeave plugin detected but setup incomplete. Run `/adweave:setup` to connect.');
-  } else {
-    const workspace = config.workspace_path || process.cwd();
-    console.log(`AdWeave active. Brand: ${config.active_brand_slug}. Workspace: ${workspace}.`);
-  }
-} catch (e) {
-  console.log(`AdWeave plugin config unreadable (${e.message}). Run \`/adweave:setup\`.`);
-}
+console.log(
+  'AdWeave plugin loaded. Run `/adweave:setup` to pick a brand, or invoke any `/adweave:*` skill directly — your active brand is remembered server-side.',
+);

@@ -25,7 +25,7 @@ First-run configuration for the AdWeave plugin. Connects to the AdWeave MCP, sel
 
 ## Load the procedure before acting
 
-**Before doing anything else, call `get_adweave_methodology("skills/setup-procedure")`** and follow the steps in the returned document exactly. The procedure covers auth verification, brand picker logic, `config.json` persistence, foundation detection, and the foundation-template scaffold.
+**Before doing anything else, call `get_adweave_methodology("skills/setup-procedure")`** and follow the steps in the returned document exactly. The procedure covers auth verification, brand picker logic (persisted server-side via `set_brand_context`), backend foundation readiness check, and optional foundation-template scaffold.
 
 If the user opts into scaffolding `./foundation/`, fetch each template file from the MCP:
 
@@ -46,25 +46,13 @@ Write each to the user's `./foundation/` directory, preserving filenames exactly
 
 ## Persisted state
 
-Write `${CLAUDE_PLUGIN_DATA}/config.json`:
-
-```json
-{
-  "active_brand_slug": "<selected_slug>",
-  "last_setup_at": "<ISO8601>",
-  "setup_complete": true,
-  "workspace_path": "<cwd or userConfig override>"
-}
-```
-
-And a marker file at `${CLAUDE_PLUGIN_DATA}/setup_complete` (empty is fine — presence is what matters for the SessionStart hook).
+Active brand is persisted server-side by `set_brand_context` (writes to `mcp_brand_sessions` keyed on user_id). Every skill reads it via `get_current_brand_context` at invocation time. **Do not write a local `config.json` or `setup_complete` marker** — those were removed 2026-04-18 because the local cache was duplicative and failed in sandboxed environments like Cowork.
 
 ## Idempotency
 
-This skill is safe to re-run. It overwrites `config.json` and re-checks brand selection. The foundation scaffold step offers to skip if `foundation/` is already populated.
+This skill is safe to re-run. `set_brand_context` upserts the user's active-brand row. The foundation scaffold step offers to skip if `foundation/` is already populated.
 
 ## Error handling
 
 - `list_brands` non-auth error → print the raw error and point the user to `status.adweave.ai`.
 - `set_brand_context` failure → brand slug mismatch or lost access; refresh via `list_brands` and retry.
-- File-write failure in the CWD → tell the user the path tried and ask for a different `workspace_path`.
