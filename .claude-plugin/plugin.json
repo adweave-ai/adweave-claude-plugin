@@ -1,6 +1,7 @@
 {
   "name": "adweave",
-  "version": "1.0.0",
+  "displayName": "AdWeave",
+  "version": "1.0.1",
   "description": "Opinionated B2C SaaS / DTC marketing workflow for Meta Ads via the AdWeave MCP. Ships the daily creative engine, metrics feedback loop, ad launch, creative production, and competitor research as a set of composable skills.",
   "author": {
     "name": "AdWeave AI",
