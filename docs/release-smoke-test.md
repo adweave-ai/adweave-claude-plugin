@@ -37,8 +37,7 @@ If using an `aw_` token instead of OAuth, export it via the `api_token` userConf
 - [ ] The returned content matches the content checked into `mcp/resources/` in the adweave monorepo
 
 ### competitor-research
-- [ ] `/adweave:competitor-research` prompts for a competitor if `profile.competitors[]` is empty; otherwise uses the list
-- [ ] `get_competitor_intelligence` returns data
+- [ ] `/adweave:competitor-research` calls `get_competitor_intelligence` and handles all 4 states correctly (complete+data, complete+empty, discovering, idle/failed). Competitors are sourced from the discovery pipeline only — they are NOT stored on the brand profile.
 - [ ] Report written to `./competitor-analysis/<competitor>-<YYYY-MM-DD>.md` in the structured format
 
 ### daily-batch
