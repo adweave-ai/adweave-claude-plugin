@@ -2,7 +2,7 @@
 /**
  * SessionStart hook for the adweave plugin.
  *
- * Prints a one-line banner pointing the user at /adweave:setup.
+ * Prints a one-line banner pointing the user at /adweave:start.
  * The active brand is persisted server-side (mcp_brand_sessions) and
  * resolved at skill-invocation time via `get_current_brand_context`, so
  * this hook does NOT attempt to display it — hooks run without MCP auth
@@ -13,5 +13,5 @@
  */
 
 console.log(
-  'AdWeave plugin loaded. Run `/adweave:setup` to pick a brand, or invoke any `/adweave:*` skill directly — your active brand is remembered server-side.',
+  'AdWeave plugin loaded. Run `/adweave:start` to pick a brand, or invoke any `/adweave:*` skill directly — your active brand is remembered server-side.',
 );

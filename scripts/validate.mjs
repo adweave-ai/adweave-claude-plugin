@@ -27,7 +27,7 @@ const ROOT = join(__dirname, '..');
 // orchestrate. Keep each SKILL.md tight so the 5k-per-skill re-attach budget
 // post-compaction is safely under the ceiling.
 const SKILL_BUDGETS_WORDS = {
-  'setup': 700,
+  'start': 700,
   'daily-batch': 600,
   'metrics-feedback': 600,
   'meta-ad-launch': 1200, // baked-in Meta API public rules (latency-critical)

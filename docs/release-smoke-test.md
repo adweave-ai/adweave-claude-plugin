@@ -22,8 +22,8 @@ If using an `aw_` token instead of OAuth, export it via the `api_token` userConf
 ## Checklist
 
 ### Setup flow
-- [ ] SessionStart hook prints *"AdWeave plugin detected but setup incomplete. Run /adweave:setup to connect."*
-- [ ] `/adweave:setup` runs without errors
+- [ ] SessionStart hook prints *"AdWeave plugin detected but setup incomplete. Run /adweave:start to connect."*
+- [ ] `/adweave:start` runs without errors
 - [ ] Auth handshake succeeds (OAuth flow OR api_token accepted)
 - [ ] Brand picker lists the expected brand(s) from `list_brands`
 - [ ] `set_brand_context` succeeds; active brand confirmed in chat
@@ -80,9 +80,9 @@ If using an `aw_` token instead of OAuth, export it via the `api_token` userConf
 - [ ] Invalid brand slug in switch → error message surfaced cleanly
 
 ### Edge cases
-- [ ] Session expired (force by invalidating token) → every skill surfaces *"Your AdWeave session has expired. Run /adweave:setup to re-authenticate."*
+- [ ] Session expired (force by invalidating token) → every skill surfaces *"Your AdWeave session has expired. Run /adweave:start to re-authenticate."*
 - [ ] `get_adweave_methodology("nonsense")` → graceful error; skill stops with a clear message
-- [ ] Foundation missing when `/adweave:daily-batch` runs → clear abort with "Run /adweave:setup"
+- [ ] Foundation missing when `/adweave:daily-batch` runs → clear abort with "Run /adweave:start"
 
 ## File any failures
 

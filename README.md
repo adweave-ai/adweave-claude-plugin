@@ -4,7 +4,7 @@ Opinionated B2C SaaS / DTC marketing workflow for Meta Ads, powered by the [AdWe
 
 ## What this plugin does
 
-- `/adweave:setup` — one-time auth + brand selection + workspace scaffold
+- `/adweave:start` — one-time auth + brand selection + workspace scaffold
 - `/adweave:daily-batch` — generate today's creative brief (3-5 ads rooted in verbatim user language)
 - `/adweave:creative-producer` — image prompts + text overlay specs for image generators + editors
 - `/adweave:meta-ad-launch` — ship a CBO campaign to Meta (PAUSED for review)
@@ -32,7 +32,7 @@ Opinionated B2C SaaS / DTC marketing workflow for Meta Ads, powered by the [AdWe
 ## First-run
 
 ```
-/adweave:setup
+/adweave:start
 ```
 
 This will:
@@ -59,7 +59,7 @@ The plugin itself is a thin orchestration layer — skills load AdWeave's opinio
 ## Known v1 limitations
 
 - Meta only. TikTok / Google Ads coming in later versions.
-- Bring your own foundation markdown (`/adweave:setup` scaffolds templates; auto-generation from existing Meta + chat data is v2).
+- Bring your own foundation markdown (`/adweave:start` scaffolds templates; auto-generation from existing Meta + chat data is v2).
 - No telemetry — no usage stats collected.
 - Single-session brand context (parallel Claude Code sessions get distinct server-side sessions).
 

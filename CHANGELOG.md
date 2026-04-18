@@ -4,6 +4,16 @@ All notable changes to the adweave Claude Code plugin are documented here.
 
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [SemVer](https://semver.org/).
 
+## [1.2.0] — 2026-04-18
+
+### Changed
+
+- **Renamed the first-run command from `/adweave:setup` to `/adweave:start`.** Better matches how users describe the action ("start"/"begin" beats the technical "setup"). Skill directory renamed `skills/setup` → `skills/start`; all prose references updated. The error messages surfaced by the MCP server (`_brand_scope`, `foundation`) also now point at `/adweave:start`.
+
+### Migration
+
+Reinstall the plugin to pick up the new skill name. Old `/adweave:setup` no longer resolves.
+
 ## [1.1.0] — 2026-04-18
 
 ### Changed

@@ -1,7 +1,7 @@
 ---
-name: setup
+name: start
 description: >-
-  Use when the user runs /adweave:setup, says "set up adweave", "connect
+  Use when the user runs /adweave:start, says "set up adweave", "connect
   my brand", "re-setup", "switch brands", or when the AdWeave plugin
   needs first-run configuration. Handles OAuth or API-token auth, brand
   selection, workspace detection, and optional foundation scaffolding.

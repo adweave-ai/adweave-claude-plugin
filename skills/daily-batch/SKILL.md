@@ -50,7 +50,7 @@ The procedure expects these foundation files in `{workspace_path}/foundation/`:
 - `offer-brief.md`
 - at least one `avatars/avatar-*.md`
 
-If any is missing, abort with: *"Missing `foundation/<file>`. Run `/adweave:setup` to scaffold."*
+If any is missing, abort with: *"Missing `foundation/<file>`. Run `/adweave:start` to scaffold."*
 
 ## Output
 
