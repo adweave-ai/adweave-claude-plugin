@@ -4,7 +4,7 @@ All notable changes to the adweave Claude Code plugin are documented here.
 
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [SemVer](https://semver.org/).
 
-## [1.0.0-dev] — unreleased
+## [1.0.0] — 2026-04-18
 
 Initial release.
 

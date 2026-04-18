@@ -1,6 +1,6 @@
 {
   "name": "adweave-claude-plugin",
-  "version": "1.0.0-dev",
+  "version": "1.0.0",
   "description": "AdWeave Claude Code plugin — opinionated marketing workflow on top of the AdWeave MCP server",
   "private": true,
   "scripts": {
