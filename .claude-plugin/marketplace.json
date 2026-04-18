@@ -5,8 +5,8 @@
     "email": "support@adweave.ai"
   },
   "metadata": {
-    "description": "AdWeave plugin — beta channel (tracks main)",
-    "version": "1.0.0-dev"
+    "description": "AdWeave plugin — beta channel (tracks main). For pinned releases use adweave-ai/adweave-plugins-stable.",
+    "version": "1.0.0"
   },
   "plugins": [
     {
