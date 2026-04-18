@@ -1,9 +1,9 @@
 {
   "mcpServers": {
-    "adweave-meta-ads": {
+    "adweave": {
       "type": "http",
       "url": "https://mcp.adweave.ai/meta-ads-mcp",
-      "note": "Production endpoint. Cowork / Claude Desktop handles auth natively via MCP OAuth. Dev branch keeps the Funnel URL for local-MCP iteration."
+      "note": "Production endpoint. The URL path stays /meta-ads-mcp for backwards compat; the connector key is 'adweave' because the server covers more than Meta Ads. Cowork / Claude Desktop handle auth natively via MCP OAuth. Dev branch keeps the Funnel URL."
     }
   }
 }

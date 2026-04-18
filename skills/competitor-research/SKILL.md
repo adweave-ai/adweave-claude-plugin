@@ -7,12 +7,12 @@ description: >-
   requests an Ad Library scan. Writes a structured report to
   ./competitor-analysis/.
 allowed-tools:
-  - mcp__adweave-meta-ads__tool_get_competitor_intelligence
-  - mcp__adweave-meta-ads__tool_get_brand_profile
-  - mcp__adweave-meta-ads__tool_get_current_brand_context
-  - mcp__adweave-meta-ads__tool_list_brands
-  - mcp__adweave-meta-ads__tool_set_brand_context
-  - mcp__adweave-meta-ads__tool_get_adweave_methodology
+  - mcp__adweave__tool_get_competitor_intelligence
+  - mcp__adweave__tool_get_brand_profile
+  - mcp__adweave__tool_get_current_brand_context
+  - mcp__adweave__tool_list_brands
+  - mcp__adweave__tool_set_brand_context
+  - mcp__adweave__tool_get_adweave_methodology
   - Read
   - Write
 ---

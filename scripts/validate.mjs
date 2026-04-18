@@ -84,7 +84,7 @@ for (const name of skillNames) {
 
   const hardcoded = body.match(/`mcp__[\w-]+__tool_[\w]+`/g);
   if (hardcoded) {
-    warn(`skills/${name}/SKILL.md uses fully-qualified tool names in prose (prefer bare, e.g., \`get_campaigns\` not \`mcp__adweave-meta-ads__tool_get_campaigns\`): ${hardcoded.slice(0, 2).join(', ')}`);
+    warn(`skills/${name}/SKILL.md uses fully-qualified tool names in prose (prefer bare, e.g., \`get_campaigns\` not \`mcp__adweave__tool_get_campaigns\`): ${hardcoded.slice(0, 2).join(', ')}`);
   }
 }
 

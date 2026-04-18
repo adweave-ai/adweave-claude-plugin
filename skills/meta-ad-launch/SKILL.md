@@ -7,21 +7,21 @@ description: >-
   1-5 ads on Meta - all PAUSED by default for user review in Ads Manager
   before activation.
 allowed-tools:
-  - mcp__adweave-meta-ads__tool_get_brand_profile
-  - mcp__adweave-meta-ads__tool_get_current_brand_context
-  - mcp__adweave-meta-ads__tool_list_brands
-  - mcp__adweave-meta-ads__tool_set_brand_context
-  - mcp__adweave-meta-ads__tool_get_account_pages
-  - mcp__adweave-meta-ads__tool_get_instagram_accounts
-  - mcp__adweave-meta-ads__tool_create_campaign
-  - mcp__adweave-meta-ads__tool_create_adset
-  - mcp__adweave-meta-ads__tool_upload_ad_image
-  - mcp__adweave-meta-ads__tool_create_ad_creative
-  - mcp__adweave-meta-ads__tool_create_carousel_ad_creative
-  - mcp__adweave-meta-ads__tool_create_ad
-  - mcp__adweave-meta-ads__tool_search_interests
-  - mcp__adweave-meta-ads__tool_search_geo_locations
-  - mcp__adweave-meta-ads__tool_get_adweave_methodology
+  - mcp__adweave__tool_get_brand_profile
+  - mcp__adweave__tool_get_current_brand_context
+  - mcp__adweave__tool_list_brands
+  - mcp__adweave__tool_set_brand_context
+  - mcp__adweave__tool_get_account_pages
+  - mcp__adweave__tool_get_instagram_accounts
+  - mcp__adweave__tool_create_campaign
+  - mcp__adweave__tool_create_adset
+  - mcp__adweave__tool_upload_ad_image
+  - mcp__adweave__tool_create_ad_creative
+  - mcp__adweave__tool_create_carousel_ad_creative
+  - mcp__adweave__tool_create_ad
+  - mcp__adweave__tool_search_interests
+  - mcp__adweave__tool_search_geo_locations
+  - mcp__adweave__tool_get_adweave_methodology
   - Read
   - Write
 ---

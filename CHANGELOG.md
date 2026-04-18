@@ -4,6 +4,17 @@ All notable changes to the adweave Claude Code plugin are documented here.
 
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [SemVer](https://semver.org/).
 
+## [1.1.0] — 2026-04-18
+
+### Changed
+
+- **MCP connector renamed from `adweave-meta-ads` to `adweave`.** The server covers more than Meta Ads now (brand context, avatars, beliefs, offer brief, methodology library, competitor intel) — the narrow name was misleading. Tool prefixes change from `mcp__adweave-meta-ads__tool_*` to `mcp__adweave__tool_*` across all six skills. The MCP endpoint URL (`/meta-ads-mcp`) stays unchanged for backwards compat.
+- All skill `allowed-tools` frontmatter updated to the new prefix.
+
+### Migration
+
+Anyone on a prior plugin version needs to reinstall (or update) to pick up the new tool prefixes — old SKILL.md files will reference tools that no longer exist under the old name.
+
 ## [1.0.1] — 2026-04-18
 
 ### Fixed

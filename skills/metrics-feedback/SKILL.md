@@ -8,18 +8,18 @@ description: >-
   confirmation calls update_ad / update_adset / update_campaign to
   pause losers or scale winners.
 allowed-tools:
-  - mcp__adweave-meta-ads__tool_get_brand_profile
-  - mcp__adweave-meta-ads__tool_get_current_brand_context
-  - mcp__adweave-meta-ads__tool_list_brands
-  - mcp__adweave-meta-ads__tool_set_brand_context
-  - mcp__adweave-meta-ads__tool_bulk_get_insights
-  - mcp__adweave-meta-ads__tool_get_insights
-  - mcp__adweave-meta-ads__tool_get_campaigns
-  - mcp__adweave-meta-ads__tool_get_ads
-  - mcp__adweave-meta-ads__tool_update_ad
-  - mcp__adweave-meta-ads__tool_update_adset
-  - mcp__adweave-meta-ads__tool_update_campaign
-  - mcp__adweave-meta-ads__tool_get_adweave_methodology
+  - mcp__adweave__tool_get_brand_profile
+  - mcp__adweave__tool_get_current_brand_context
+  - mcp__adweave__tool_list_brands
+  - mcp__adweave__tool_set_brand_context
+  - mcp__adweave__tool_bulk_get_insights
+  - mcp__adweave__tool_get_insights
+  - mcp__adweave__tool_get_campaigns
+  - mcp__adweave__tool_get_ads
+  - mcp__adweave__tool_update_ad
+  - mcp__adweave__tool_update_adset
+  - mcp__adweave__tool_update_campaign
+  - mcp__adweave__tool_get_adweave_methodology
   - Read
   - Write
 ---
