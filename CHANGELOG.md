@@ -4,6 +4,22 @@ All notable changes to the adweave Claude Code plugin are documented here.
 
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [SemVer](https://semver.org/).
 
+## [1.3.0] — 2026-04-21
+
+### Added
+
+- **`/adweave:ship-campaign`** — new umbrella skill that chains `daily-batch` → `creative-producer` → `meta-ad-launch` into a single flow. Kickoff collects all inputs (avatar, angle, budget, targeting, objective) up front; the skill then runs autonomously through the three stages with one confirm gate before any Meta write. Reuses today's batch file if one already matches the requested avatar+angle. Best-effort partial-failure handling — one bad image or failed ad never aborts the batch.
+- Per-skill size budget for `ship-campaign` (800 words) added to `scripts/validate.mjs`.
+
+### Depends on
+
+- MCP server tool `tool_batch_upload_and_create_creatives` (ships in the AdWeave MCP alongside this release) — used by the launch stage to collapse the per-ad upload+creative round-trip.
+- MCP server procedure `skills/ship-campaign-procedure` — the step-by-step flow is served over `get_adweave_methodology`, keeping the SKILL.md thin.
+
+### Migration
+
+Reinstall the plugin to pick up the new skill. Nothing breaks if you don't — the existing three skills (`daily-batch`, `creative-producer`, `meta-ad-launch`) keep working standalone.
+
 ## [1.2.0] — 2026-04-18
 
 ### Changed

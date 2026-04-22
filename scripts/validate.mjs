@@ -33,6 +33,7 @@ const SKILL_BUDGETS_WORDS = {
   'meta-ad-launch': 1200, // baked-in Meta API public rules (latency-critical)
   'creative-producer': 600,
   'competitor-research': 500,
+  'ship-campaign': 800, // umbrella over the above; still a thin shell
 };
 
 const errors = [];
