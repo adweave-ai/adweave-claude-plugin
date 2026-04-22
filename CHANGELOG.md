@@ -4,6 +4,12 @@ All notable changes to the adweave Claude Code plugin are documented here.
 
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [SemVer](https://semver.org/).
 
+## [1.3.1] — 2026-04-21
+
+### Fixed
+
+- **`/adweave:creative-producer` SKILL.md updated to the single-prompt flow.** Previously it described the obsolete "two-deliverable pattern" (text-free base image + separate overlay spec) in its body prose, which conflicted with the new `skills/creative-producer-procedure` that the skill loads at runtime. The SKILL.md now describes the single baked-in-text prompt flow via `tool_generate_static_ad`, matching the procedure and the `image-generation-guide` methodology. `allowed-tools` narrowed to just what the skill actually uses (`tool_generate_static_ad` + methodology + brand-context tools).
+
 ## [1.3.0] — 2026-04-21
 
 ### Added
